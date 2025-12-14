@@ -1,0 +1,92 @@
+/* --- Global Styles and Centering --- */
+
+:host {
+  /* Center the register form content on the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eef1f5; /* Soft, light background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+}
+
+/* --- Container (Implied) Styling for structure --- */
+/* Since you don't have a container div, we'll style the individual elements to look coherent */
+
+h2 {
+  color: #34495e; /* Dark slate grey */
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Status Messages (Success/Info) --- */
+
+p {
+  color: #27ae60; /* Success green */
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* --- Input Field Styling & Effects --- */
+
+input {
+  width: 300px; /* Consistent width for classic look */
+  padding: 12px 15px;
+  border: 1px solid #bdc3c7; /* Light neutral border */
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out; /* Enable smooth transitions for effects */
+}
+
+input:focus {
+  border-color: #3498db; /* Primary blue on focus */
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.4); /* Soft blue glow (Animation effect) */
+  transform: scale(1.02); /* Slight scale-up for attention (Animation effect) */
+  outline: none;
+}
+
+/* --- Button Styling & Effects --- */
+
+button {
+  width: 300px; /* Match input width */
+  padding: 12px 15px;
+  background-color: #2ecc71; /* Fresh green for action */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.3);
+  transition: all 0.2s ease; /* Enable smooth transitions for effects */
+}
+
+button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+  box-shadow: 0 6px 12px rgba(46, 204, 113, 0.4); /* Deeper shadow on hover (Animation effect) */
+  transform: translateY(-2px); /* Slight lift on hover (Animation effect) */
+}
+
+button:active {
+  transform: translateY(1px); /* Press effect on click (Animation effect) */
+  box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
+}
+
+/* --- Link Styling --- */
+
+a {
+  color: #3498db; /* Primary blue for links */
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2980b9; /* Darker blue on hover */
+  text-decoration: underline; /* Standard link effect */
+}

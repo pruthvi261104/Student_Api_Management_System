@@ -1,0 +1,176 @@
+:host {
+  display: block;
+  padding: 1.5rem;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f5f7fb, #eef2f7);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+.orders-card {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeSlideIn 0.6s ease;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.orders-card h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: 0.3px;
+}
+.order-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #6b7280;
+}
+
+.field input {
+  padding: 0.55rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.field input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  transform: translateY(-1px);
+}
+.form-actions {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-end;
+}
+
+.form-actions button {
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-actions button[type="submit"] {
+  background: linear-gradient(180deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+}
+
+.form-actions button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+}
+
+.form-actions button[type="button"] {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.form-actions button[type="button"]:hover {
+  background: #e5e7eb;
+}
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.orders-table th {
+  text-align: left;
+  font-size: 0.85rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orders-table td {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #111827;
+  border-bottom: 1px solid #f1f5f9;
+}
+.orders-table tr {
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.orders-table tbody tr:hover {
+  background: #f1f5f9;
+  transform: scale(1.01);
+}
+.orders-table button {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.orders-table button:first-child {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.orders-table button:first-child:hover {
+  background: #bae6fd;
+  transform: translateY(-1px);
+}
+
+.orders-table button:last-child {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.orders-table button:last-child:hover {
+  background: #fecaca;
+  transform: translateY(-1px);
+}
+@media (max-width: 700px) {
+  .order-form {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-card {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+<p>register works!</p>
+<h2>Register</h2>
+
+<p style="color: green">{{ message() }}</p>
+
+<input
+  placeholder="Email"
+  [ngModel]="email()"
+  (ngModelChange)="email.set($event)" />
+
+<br /><br />
+
+<input
+  placeholder="Password"
+  type="password"
+  [ngModel]="password()"
+  (ngModelChange)="password.set($event)" />
+
+<br /><br />
+
+<button (click)="register()">Register</button>
+
+<br /><br />
+
+<a routerLink="/login">Already registered? Login</a>
